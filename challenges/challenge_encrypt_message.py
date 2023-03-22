@@ -16,7 +16,3 @@ def encrypt_message(message: str, key: int):
         part_two, part_one = part_one, part_two
 
     return "".join(part_one) + "_" + "".join(part_two)
-
-
-# teste = encrypt_message("barcelona", 4)
-# print(teste)
