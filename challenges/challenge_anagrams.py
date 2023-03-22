@@ -22,7 +22,8 @@ def partition_string(string, first, last):
     while not done:
         while (left_mark <= right_mark) and (string[left_mark] <= pivot_value):
             left_mark += 1
-        while (string[right_mark] >= pivot_value) and (right_mark >= left_mark):
+        while (string[right_mark] >= pivot_value) and \
+                (right_mark >= left_mark):
             right_mark -= 1
         if right_mark < left_mark:
             done = True
@@ -34,7 +35,6 @@ def partition_string(string, first, last):
 
 
 def is_anagram(first_string, second_string, ignore_case=True):
-    """Verifica se duas strings são anagramas."""
     global sort_used
     if sort_used:
         raise Exception("Não utilize o método padrão de ordenação.")
